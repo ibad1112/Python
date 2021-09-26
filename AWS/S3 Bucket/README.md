@@ -1,1 +1,9 @@
+This python script can be used to connect to an AWS S3 bucket and read a specific file from a list of objects stored in S3. To do this we will use Python SDK for AWS more commonly known as boto3. To run this script one can use any Python IDE. The first step involves importing the necessary packages into the IDE. The Boto module provides an easy to use, object-oriented API, as well as low-level access to AWS resources.
 
+For accessing S3 bucket in AWS account, we also need an access token key (Token ID analogous to a username) and a secret access key (analogous to a password) to access AWS resources, like EC2 and S3 via an SDK. Currently the languages supported by the SDK are node.js, Java, .NET, Python, Ruby, PHP, GO, C++, JS (Browser version) and mobile versions of the SDK for Android and iOS.
+
+Identify, the bucket that you would like to access where you have your data stored. Once you have the identified the name of the bucket for instance ‘filename_prod’, you can assign this name to the variable named s3_bucket name as shown in the script below
+
+Next, we will look at accessing the objects in the bucket name, which is stored in the variable, named “s3_bucket_name”, with the Bucket() method and assigning the list of objects into a variable, named my_bucket. We start by creating an empty list, called bucket_list. The for loop in the below script reads the objects one by one in the bucket, named “my_bucket”, looking for objects starting with a prefix ‘2019/7/8’. Once it finds the object with a prefix ‘2019/7/8’, the ‘if’ condition in the below script checks for the .csv extension.
+
+This continues until the loop reaches the end of the list and then appends the filenames with a suffix of .csv and having a prefix’2019/7/8’ to the list, bucket_list. We will then print out the length of the list bucket_list and assign it to a variable, named length_bucket_list, and print out the file names of the first 10 objects.
