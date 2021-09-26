@@ -6,4 +6,4 @@ Identify, the bucket that you would like to access where you have your data stor
 
 Next, we will look at accessing the objects in the bucket name, which is stored in the variable, named “s3_bucket_name”, with the Bucket() method and assigning the list of objects into a variable, named my_bucket. We start by creating an empty list, called bucket_list. The for loop in the below script reads the objects one by one in the bucket, named “my_bucket”, looking for objects starting with a prefix ‘2019/7/8’. Once it finds the object with a prefix ‘2019/7/8’, the ‘if’ condition in the below script checks for the .csv extension.
 
-This continues until the loop reaches the end of the list and then appends the filenames with a suffix of .csv and having a prefix’2019/7/8’ to the list, bucket_list. We will then print out the length of the list bucket_list and assign it to a variable, named length_bucket_list, and print out the file names of the first 10 objects.
+
